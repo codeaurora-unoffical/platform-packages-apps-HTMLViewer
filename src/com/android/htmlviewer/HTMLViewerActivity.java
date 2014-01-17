@@ -32,6 +32,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 
 /**
  * Wraps a WebView widget within an Activity. When launched, it uses the 
@@ -103,6 +104,12 @@ public class HTMLViewerActivity extends Activity {
                         ? FileContentProvider.BASE_URI + uri.getEncodedPath()
                         : uri.toString();
                 String intentType = intent.getType();
+                if(intentType.equals("text/plain")) {
+                   Locale locale = getResources().getConfiguration().locale;
+                   if(locale.getLanguage().equals(Locale.CHINESE.getLanguage())) {
+                       s.setDefaultTextEncodingName("GBK");
+                   }
+                }
                 if (intentType != null) {
                     contentUri += "?" + intentType;
                 }
