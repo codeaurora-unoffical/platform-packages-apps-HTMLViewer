@@ -111,9 +111,6 @@ public class HTMLViewerActivity extends Activity {
                         s.setDefaultTextEncodingName("GBK");
                     }
                 }
-                if (intentType != null) {
-                    contentUri += "?" + intentType;
-                }
                 mWebView.loadUrl(contentUri);
             }
         }
