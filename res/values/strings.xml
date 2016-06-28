@@ -17,5 +17,6 @@
 <resources>
     <!-- Title of the HTML Viewer activity. -->
     <string name="app_label">HTML Viewer</string>
+    <string name="turn_on_storage_permission">Please turn on Storage permission in app permissions.</string>
 </resources>
 

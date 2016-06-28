@@ -21,7 +21,8 @@
         package="com.android.htmlviewer">
     <original-package android:name="com.android.htmlviewer" />
 
-    <uses-sdk android:minSdkVersion="13" android:targetSdkVersion="21"/>
+    <uses-sdk android:minSdkVersion="23"
+            android:targetSdkVersion="23" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
